@@ -1,7 +1,16 @@
+import { Editor } from "@monaco-editor/react";
 
 const CodeWriter= ()=>{
+
     return <>
-    <div>Code Writer</div>
+
+    <Editor
+        height={"90vh"}
+        defaultLanguage="javascript"
+        defaultValue="//some comment 
+console.log('hello world')"
+    />
+
     </>
 }
 
