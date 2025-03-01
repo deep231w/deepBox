@@ -6,9 +6,12 @@ const ExecuteCode = (filepath: string, language: string) => {
     let command = "";
 
     if (language === "cpp") {
-      command = `docker run --rm -v "${filepath}:/app/temp.cpp" -w /app gcc:latest sh -c "g++ temp.cpp -o temp && ./temp"`;
+      //command = `docker run --rm -v "${filepath}:/app/temp.cpp" -w /app gcc:latest sh -c "g++ temp.cpp -o temp && ./temp"`;
+      command = `g++ ${filepath} -o output && ./output`;
+
     } else if (language === "py") {
-      command = `docker run --rm -v "${filepath}:/app/temp.py" -w /app python:latest python3 temp.py`;
+      //command = `docker run --rm -v "${filepath}:/app/temp.py" -w /app python:latest python3 temp.py`;
+      command = `python3 ${filepath}`;
     } else {
       console.error("Unsupported language:", language);
       return;
