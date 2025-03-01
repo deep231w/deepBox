@@ -1,4 +1,5 @@
 import { exec } from "child_process";
+import fs from "fs";
 
 const ExecuteCode = (filepath: string, language: string) => {
   try {
@@ -19,7 +20,16 @@ const ExecuteCode = (filepath: string, language: string) => {
         return;
       }
       console.log("Output:", stdout);
-      console.error("Errors:", stderr);
+      console.error("Errors:", stderr? stderr:"no error");
+      fs.unlink(filepath, (err)=>{
+        if(err){
+            console.log("error during file deletion= ",err.message);
+
+        }
+        else{
+            console.log(`${filepath} deleted`);
+        }
+      })
     });
   } catch (e) {
     console.log("Server error during code execution", e);
