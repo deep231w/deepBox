@@ -19,4 +19,4 @@ RUN npm run build
 EXPOSE 3000
 
 # Start the backend
-CMD ["npm", "start","node dist/index.js"]
+CMD ["npm", "start"]
