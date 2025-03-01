@@ -7,8 +7,8 @@ app.use(cors({
     methods:['GET','POST','DELET','PUT'],
     credentials:true
 }))
-
-app.get("/", codeRunRoute);
+app.use(express.json());
+app.use("/", codeRunRoute);
 
  
 app.listen(3000, ()=>{
