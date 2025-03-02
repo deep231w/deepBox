@@ -6,9 +6,9 @@ import RunButton from "@/components/runButton";
 import Navbar from "@/components/navbar";
 const Home = () => {
     return (
-        <div className="h-screen flex flex-col bg-black text-white">
+        <div className="h-screen flex flex-col bg-gray-400 text-white">
             <Navbar />
-            <div className="flex flex-grow p-4 gap-4">
+            <div className="flex flex-grow p-2 ">
                 <div className="flex-1">
                         <Card>
                             <CodeWriter />

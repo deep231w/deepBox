@@ -13,12 +13,12 @@ const SelectLanguage= ()=>{
         <div>
             <Select>
                 <SelectTrigger className="w-[180px]">
-                    <SelectValue placeholder="Theme" />
+                    <SelectValue placeholder="Select Language" />
                 </SelectTrigger>
                 <SelectContent>
-                    <SelectItem value="light">Light</SelectItem>
-                    <SelectItem value="dark">Dark</SelectItem>
-                    <SelectItem value="system">System</SelectItem>
+                    <SelectItem value="light">C++</SelectItem>
+                    <SelectItem value="dark">Python</SelectItem>
+                    <SelectItem value="system">JavaScript</SelectItem>
                 </SelectContent>
             </Select>
         </div>

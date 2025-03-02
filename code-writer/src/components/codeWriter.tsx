@@ -9,6 +9,7 @@ const CodeWriter= ()=>{
         defaultLanguage="javascript"
         defaultValue="//some comment 
 console.log('hello world')"
+        className="border-none bg-transparent"
     />
 
     </>
