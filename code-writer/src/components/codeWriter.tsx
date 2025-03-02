@@ -10,7 +10,8 @@ const CodeWriter= ()=>{
         height={"90vh"}
         defaultLanguage="javascript"
         defaultValue="//some comment 
-console.log('hello world')"
+console.log('hello world')
+"
         className="border-none bg-transparent"
         theme={theme=== "dark" ? "light" :"vs-dark"}
     />
