@@ -6,7 +6,7 @@ import RunButton from "@/components/runButton";
 import Navbar from "@/components/navbar";
 const Home = () => {
     return (
-        <div className="h-screen flex flex-col bg-gray-900 text-white">
+        <div className="h-screen flex flex-col bg-gray-900 text-white dark:bg-white">
             <Navbar />
             <div className="flex flex-grow p-2">
                 <div className="flex-1 ">
