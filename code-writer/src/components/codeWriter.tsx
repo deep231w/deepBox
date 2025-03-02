@@ -10,6 +10,7 @@ const CodeWriter= ()=>{
         defaultValue="//some comment 
 console.log('hello world')"
         className="border-none bg-transparent"
+        theme="vs-dark"
     />
 
     </>

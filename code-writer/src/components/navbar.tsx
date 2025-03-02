@@ -1,7 +1,11 @@
 const Navbar= ()=>{
     return (
-        <div>
-            DeepBox
+        <div className="flex justify-between">
+            <div
+                className="text-2xl pl-4 pt-2 text font-mono font-bold"
+                >DeepBox
+            </div>
+            <div></div>
         </div>
     )
 }

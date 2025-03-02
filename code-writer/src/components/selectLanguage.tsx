@@ -12,8 +12,8 @@ const SelectLanguage= ()=>{
     return (
         <div>
             <Select>
-                <SelectTrigger className="w-[180px]">
-                    <SelectValue placeholder="Select Language" />
+                <SelectTrigger className="w-[180px] ">
+                    <SelectValue placeholder="Select Language" className="text-gray-400"/>
                 </SelectTrigger>
                 <SelectContent>
                     <SelectItem value="light">C++</SelectItem>
