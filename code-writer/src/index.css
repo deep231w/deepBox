@@ -132,3 +132,6 @@ html, body {
 }
 
 
+*{
+    @apply transition-all duration-300
+}
