@@ -12,7 +12,6 @@ interface SelectHandler{
   
 const SelectLanguage= ({onChange}:SelectHandler)=>{
     
-
     return (
         <div>
             <Select onValueChange={onChange}>
