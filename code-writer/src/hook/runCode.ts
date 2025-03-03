@@ -1,15 +1,16 @@
 import axios from "axios";
 import { useState } from "react"
 
-
-
-
+interface RunHandler{
+    code:String | "";
+    language:string | null;
+}
 const useRuncode= ()=>{
     const [output , setOutput]=useState<string | null>(null)
     const [loading, setLoading]=useState(true);
     const [error, setError]=useState<string | null>(null);
 
-    const runCode= async(code:string, language:string)=>{
+    const runCode= async({code, language}:RunHandler)=>{
             try{
                 const Response= await axios.post("http://localhost:3000/run",{
                     code,
