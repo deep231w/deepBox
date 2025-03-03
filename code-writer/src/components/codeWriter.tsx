@@ -1,11 +1,14 @@
 import { Editor } from "@monaco-editor/react";
 import { useTheme } from "@/context/themeContext";
 
-const CodeWriter= ()=>{
+interface CodeHandler{
+    value:string,
+    onChange:(value:string)=>void
+}
+const CodeWriter= ({value,onChange}:CodeHandler)=>{
+
     const {theme}= useTheme();
-    function EditorHandler (value:string | undefined ){
-        console.log(value);
-    }
+
     return <>
 
     <Editor
@@ -15,8 +18,9 @@ const CodeWriter= ()=>{
 console.log('hello world')
 "
         className="border-none bg-transparent"
+        value={value}
         theme={theme=== "dark" ? "light" :"vs-dark"}
-        onChange={EditorHandler}
+        onChange={(newValue)=> onChange(newValue || "")}
     />
 
     </>

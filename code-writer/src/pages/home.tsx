@@ -6,17 +6,19 @@ import RunButton from "@/components/runButton";
 import Navbar from "@/components/navbar";
 import { useState } from "react";
 const Home = () => {
-    const [language, setLanguage]= useState<string| null>(null);
-    console.log("selected language:", language);
-
+    const [language, setLanguage]= useState<string| null>("JavaScript");
     
+    console.log("selected language:", language);
+    const [code, setCode]=useState<string | "">("");
+    console.log("code:", code);
+
     return (
         <div className="h-screen flex flex-col bg-gray-900 text-white dark:bg-white">
             <Navbar />
             <div className="flex flex-grow p-2">
                 <div className="flex-1 ">
                         <Card>
-                            <CodeWriter />
+                            <CodeWriter value={code} onChange={setCode}/>
                         </Card>
                 </div>
                 <div className="w-1/3 flex flex-col gap-4">
