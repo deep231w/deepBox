@@ -20,7 +20,7 @@ const SelectLanguage= ({onChange}:SelectHandler)=>{
                     <SelectValue placeholder="Select Language" className="text-gray-400"/>
                 </SelectTrigger>
                 <SelectContent>
-                    <SelectItem value="c++">Cpp</SelectItem>
+                    <SelectItem value="cpp">Cpp</SelectItem>
                     <SelectItem value="python">Python</SelectItem>
                     <SelectItem value="JavaScript">JavaScript</SelectItem>
                 </SelectContent>
