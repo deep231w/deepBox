@@ -5,15 +5,17 @@ import {
     SelectTrigger,
     SelectValue,
   } from "@/components/ui/select"
-import { useState } from "react";
 
+interface SelectHandler{
+    onChange:(value:string)=>void;
+}
   
-const SelectLanguage= ()=>{
-    const [language ,setLanguage]= useState<string | undefined>(undefined)
-    console.log("language selected= ", language);
+const SelectLanguage= ({onChange}:SelectHandler)=>{
+    
+
     return (
         <div>
-            <Select onValueChange={(value)=> setLanguage(value)}>
+            <Select onValueChange={onChange}>
 
                 <SelectTrigger className="w-[180px] ">
                     <SelectValue placeholder="Select Language" className="text-gray-400"/>
