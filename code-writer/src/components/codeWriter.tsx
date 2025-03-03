@@ -3,7 +3,9 @@ import { useTheme } from "@/context/themeContext";
 
 const CodeWriter= ()=>{
     const {theme}= useTheme();
-
+    function EditorHandler (value:string | undefined ){
+        console.log(value);
+    }
     return <>
 
     <Editor
@@ -14,6 +16,7 @@ console.log('hello world')
 "
         className="border-none bg-transparent"
         theme={theme=== "dark" ? "light" :"vs-dark"}
+        onChange={EditorHandler}
     />
 
     </>

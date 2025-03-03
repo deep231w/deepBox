@@ -5,13 +5,16 @@ import {
     SelectTrigger,
     SelectValue,
   } from "@/components/ui/select"
+import { useState } from "react";
 
   
 const SelectLanguage= ()=>{
+    const [language ,setLanguage]= useState<string | undefined>(undefined)
 
     return (
         <div>
-            <Select>
+            <Select onValueChange={(value)=> setLanguage(value)}>
+                
                 <SelectTrigger className="w-[180px] ">
                     <SelectValue placeholder="Select Language" className="text-gray-400"/>
                 </SelectTrigger>
