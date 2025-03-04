@@ -13,9 +13,12 @@ const CodeWriter= ({value,onChange}:CodeHandler)=>{
 
     <Editor
         height={"90vh"}
-        defaultLanguage="javascript"
-        defaultValue="//some comment 
-console.log('hello world')
+        defaultLanguage="cpp"
+        defaultValue="#include <iostream>
+int main() {
+    std::cout << 'Hello World';
+    return 0;
+}
 "
         className="border-none bg-transparent"
         value={value}
