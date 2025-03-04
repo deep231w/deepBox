@@ -23,6 +23,9 @@ const ExecuteCode = (filepath: string, language: string) => {
         return;
       }
       console.log("Output:", stdout);
+      if(stdout){
+        return stdout;
+      }
       console.error("Errors:", stderr? stderr:"no error");
       fs.unlink(filepath, (err)=>{
         if(err){
