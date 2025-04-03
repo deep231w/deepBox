@@ -17,7 +17,7 @@ const SelectLanguage= ({onChange}:SelectHandler)=>{
             <Select onValueChange={onChange}>
 
                 <SelectTrigger className="w-[180px] ">
-                    <SelectValue placeholder="Select Language" className="text-gray-400"/>
+                    <SelectValue placeholder="cpp" className="text-gray-400"/>
                 </SelectTrigger>
                 <SelectContent>
                     <SelectItem value="cpp">Cpp</SelectItem>

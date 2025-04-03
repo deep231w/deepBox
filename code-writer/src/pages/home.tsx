@@ -7,7 +7,7 @@ import Navbar from "@/components/navbar";
 import { useState } from "react";
 import useRuncode from "@/hook/runCode";
 const Home = () => {
-    const [language, setLanguage]= useState<string| null>("JavaScript");
+    const [language, setLanguage]= useState<string| null>("cpp");
 
     console.log("selected language:", language);
     const [code, setCode]=useState<string | "">("");
