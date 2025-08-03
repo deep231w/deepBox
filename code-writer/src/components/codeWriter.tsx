@@ -12,7 +12,7 @@ const CodeWriter= ({value,onChange}:CodeHandler)=>{
     return <>
 
     <Editor
-        height={"90vh"}
+        height={"100vh"}
         defaultLanguage="cpp"
         defaultValue="#include <iostream>
 int main() {
@@ -23,7 +23,10 @@ int main() {
         className="border-none bg-transparent"
         value={value}
         theme={theme=== "dark" ? "light" :"vs-dark"}
-        onChange={(newValue)=> onChange(newValue || "")}
+        onChange={(newValue)=> {
+            onChange(newValue || "")
+            console.log("code inside the code writer component-", newValue)
+        }}
     />
 
     </>

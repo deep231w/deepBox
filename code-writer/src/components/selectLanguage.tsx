@@ -1,7 +1,9 @@
 import {
     Select,
     SelectContent,
+    SelectGroup,
     SelectItem,
+    SelectLabel,
     SelectTrigger,
     SelectValue,
   } from "@/components/ui/select"
@@ -17,12 +19,15 @@ const SelectLanguage= ({onChange}:SelectHandler)=>{
             <Select onValueChange={onChange}>
 
                 <SelectTrigger className="w-[180px] ">
-                    <SelectValue placeholder="cpp" className="text-gray-400"/>
+                    <SelectValue placeholder="select a language" />
                 </SelectTrigger>
                 <SelectContent>
-                    <SelectItem value="cpp">Cpp</SelectItem>
+                    <SelectGroup>
+                    <SelectLabel>Language</SelectLabel>
+                    <SelectItem value="cpp">C++</SelectItem>
                     <SelectItem value="python">Python</SelectItem>
                     <SelectItem value="JavaScript">JavaScript</SelectItem>
+                </SelectGroup>
                 </SelectContent>
             </Select>
         </div>

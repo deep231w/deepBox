@@ -1,11 +1,13 @@
 import CodeWriter from "../components/codeWriter";
 import OutputRender from "../components/outputRender";
-import Card from "../components/card";
+import { Card } from "@/components/ui/card";
 import SelectLanguage from "@/components/selectLanguage";
 import RunButton from "@/components/runButton";
 import Navbar from "@/components/navbar";
 import { useState } from "react";
 import useRuncode from "@/hook/runCode";
+
+
 const Home = () => {
     const [language, setLanguage]= useState<string| null>("cpp");
 
@@ -16,15 +18,15 @@ const Home = () => {
     const {runCode}=useRuncode();
 
     return (
-        <div className="h-screen flex flex-col bg-gray-900 text-white dark:bg-white">
+        <div className="h-screen flex flex-col bg-neutral-900	 text-white dark:bg-white">
             <Navbar />
-            <div className="flex flex-grow p-2">
-                <div className="flex-1 ">
-                        <Card>
+            <div className="flex flex-row flex-1 overflow-hidden">
+                <div className="flex-1 p-4 overflow-hidden">
+                        <Card className="h-full bg-neutral-900">
                             <CodeWriter value={code} onChange={setCode}/>
                         </Card>
                 </div>
-                <div className="w-1/3 flex flex-col gap-4">
+                <div className=" flex flex-col gap-1">
                     <div className="flex gap-20 pl-20">
                         <SelectLanguage onChange={setLanguage}/>
 
