@@ -14,12 +14,7 @@ const CodeWriter= ({value,onChange}:CodeHandler)=>{
     <Editor
         height={"100vh"}
         defaultLanguage="cpp"
-        defaultValue="#include <iostream>
-int main() {
-    std::cout << 'Hello World';
-    return 0;
-}
-"
+        
         className="border-none bg-transparent"
         value={value}
         theme={theme=== "dark" ? "light" :"vs-dark"}

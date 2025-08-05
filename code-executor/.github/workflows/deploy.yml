@@ -1,0 +1,27 @@
+name: Deploy Backend to EC2
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repo
+      uses: actions/checkout@v3
+
+    - name: Deploy to EC2 via SSH
+      uses: appleboy/ssh-action@v0.1.9
+      with:
+        host: '3.110.163.134'
+        username: 'ubuntu'
+        key: ${{ secrets.EC2_KEY }}
+        script: |
+          cd ~/deepBox/code-executor
+          git pull origin main
+          npm install
+          npm run build
+          pm2 restart code-executor || pm2 start dist/index.js --name code-executor
