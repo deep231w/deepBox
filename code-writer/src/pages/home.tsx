@@ -20,21 +20,21 @@ const Home = () => {
     return (
         <div className="h-screen flex flex-col bg-neutral-900	 text-white dark:bg-white">
             <Navbar />
-            <div className="flex flex-row flex-1 overflow-hidden">
-                <div className="flex-1 p-4 overflow-hidden">
+            <div className="flex flex-col sm:flex-row flex-1 overflow-hidden gap-1 ">
+                <div className="flex-1 overflow-hidden">
                         <Card className="h-full bg-neutral-900">
                             <CodeWriter value={code} onChange={setCode}/>
                         </Card>
                 </div>
-                <div className=" flex flex-col gap-1">
-                    <div className="flex gap-20 pl-20">
+                <div className=" flex flex-col gap-1 lg:w-80 xl:w-100">
+                    <div className="flex justify-between gap-1">
                         <SelectLanguage onChange={setLanguage}/>
 
                         <RunButton onClick={()=>runCode({code,language})}/>
 
                     </div>
-                    <div className="pl-2 h-full">
-                        <Card>
+                    <div className=" h-full">
+                        <Card className="h-full bg-neutral-900">
                             <OutputRender />
                         </Card>
                     </div>

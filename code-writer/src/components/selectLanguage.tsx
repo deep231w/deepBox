@@ -16,7 +16,7 @@ const SelectLanguage= ({onChange}:SelectHandler)=>{
     
     return (
         <div>
-            <Select onValueChange={onChange}>
+            <Select onValueChange={onChange} defaultValue="cpp">
 
                 <SelectTrigger className="w-[180px] ">
                     <SelectValue placeholder="select a language" />

@@ -2,7 +2,7 @@
 const OutputRender= ()=>{
 
     return <div>
-        <p className="dark:text-gray-800">//OUTPUT</p>
+        <p className="text-gray-100">//OUTPUT</p>
     </div>
 }
 

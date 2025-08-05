@@ -12,8 +12,9 @@ const useRuncode= ()=>{
 
     const runCode= async({code, language}:RunHandler)=>{
             try{
-                // const codeinString= JSON.stringify(code);
-                // console.log("code in string",codeinString);
+                const codeinString= JSON.stringify(code);
+                console.log("code in string-" , code);
+                console.log("lang in runcode.ts- ",language );
 
                 const Response= await axios.post("http://localhost:3000/run",{
                     code:JSON.stringify(code),
