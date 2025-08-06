@@ -10,7 +10,10 @@ app.use(cors({
 app.use(express.json());
 app.use("/", codeRunRoute);
 
- 
+ app.get("/", (req, res) => {
+  res.send("API is working");
+});
+
 app.listen(3000,'0.0.0.0', ()=>{
     console.log("server running on port 3000");
 })
